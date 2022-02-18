@@ -91,7 +91,7 @@ select {
 /* ####################################### */
 /* END CSS RESET */
 main {
-  height: 100%;
+  min-height: 100vh;
   overflow-y: scroll;
   position: relative;
 }
@@ -195,7 +195,6 @@ main {
   line-height: 1.5;
 }
 
-
 /* ######################################### */
 @media (min-width: 1000px) {
   .container {
@@ -273,7 +272,7 @@ main {
   .rating-text {
     padding-left: 1rem;
   }
-  .rating-stars__star{
+  .rating-stars__star {
     padding: 0;
   }
 }
