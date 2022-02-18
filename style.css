@@ -61,8 +61,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+  /* max-width: 100%;
+  display: block; */
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -90,12 +90,16 @@ select {
 }
 /* ####################################### */
 /* END CSS RESET */
-main {
-  /* height: 100%; */
-  font-size: 15px;
-  margin: 6rem 1.5rem;
-  text-align: center;
+main{
+  height: 100%;
+  overflow-y: scroll;
   position: relative;
+}
+.container {
+  height: 100%;
+  font-size: 15px;
+  margin: 6rem 1.2rem;
+  text-align: center;
 }
 /* ##################################### */
 .bg-image-desktop {
@@ -133,20 +137,24 @@ main {
 /* ##################################### */
 .rating-box {
   background-color: var(--Light-grayish-magenta);
-  /* height: 60px; */
   margin: 1rem auto;
   padding: 1rem 0;
-  /* display: block; */
+  border-radius: 10px;
 }
-.rating-stars {
+.rating-stars{
+  display: block;
+}
+.rating-stars__star{
+  padding: 0 2px;
+}
+/* .rating-stars {
   background-image: url(./images/icon-star.svg);
   background-repeat: repeat-x;
   height: 20px;
   display: block;
   margin: 0 auto 1rem auto;
-  /* padding: 1rem 0; */
   width: 85px;
-}
+} */
 .rating-text {
   color: var(--very-dark-magenta);
   font-weight: 700;
@@ -193,7 +201,7 @@ main {
 
 /* ######################################### */
 @media (min-width: 600px) {
-  main {
+  .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
