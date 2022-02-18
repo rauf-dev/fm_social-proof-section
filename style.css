@@ -90,7 +90,7 @@ select {
 }
 /* ####################################### */
 /* END CSS RESET */
-main{
+main {
   height: 100%;
   overflow-y: scroll;
   position: relative;
@@ -98,8 +98,10 @@ main{
 .container {
   height: 100%;
   font-size: 15px;
-  margin: 6rem 1.2rem;
+  padding: 6rem 1.2rem;
+  margin: 0 auto;
   text-align: center;
+  max-width: 500px;
 }
 /* ##################################### */
 .bg-image-desktop {
@@ -141,10 +143,11 @@ main{
   padding: 1rem 0;
   border-radius: 10px;
 }
-.rating-stars{
+.rating-stars {
   display: block;
+  flex-shrink: 0;
 }
-.rating-stars__star{
+.rating-stars__star {
   padding: 0 2px;
 }
 /* .rating-stars {
@@ -159,6 +162,7 @@ main{
   color: var(--very-dark-magenta);
   font-weight: 700;
   font-size: 14px;
+  flex-shrink: 0;
   /* the weight/bold seems off */
 }
 /* ##################################### */
@@ -198,56 +202,98 @@ main{
   color: var(--White);
   line-height: 1.5;
 }
-
 /* ######################################### */
-@media (min-width: 600px) {
+/* ######################################### */
+/* ######################################### */
+@media (min-width: 1000px) {
   .container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'box-one box-one box-one box-two box-two box-two'
-      'tb-one tb-one tb-two tb-two tb-three tb-three';
-    margin: 10%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  padding: 10%;
+  justify-content: space-between;
   }
+  .box-one,
+.box-two {
+  margin-bottom: 0;
+}
   /* ##################################### */
-  .bg-image-mobile{
-      display: none;
+  .bg-image-mobile {
+    display: none;
   }
-  .bg-image-desktop{
-      display: block;
+  .bg-image-desktop {
+    display: block;
   }
-  .box-one {
-    grid-area: box-one;
-    justify-items: start;
+  /* ################ */
+  .box-one{
+    flex: 0 0 48%;
     text-align: left;
   }
-  .title {
-    margin-bottom: 0.2rem;
-    padding: 0 40% 0 0;
+  .title{
+    padding-right: 35%;
   }
-  .text{
-      padding-right: 20%;
-  }
-  .box-two {
-    grid-area: box-two;
+  .box-two{
+    flex: 0 0 48%;
     display: flex;
-    flex-direction: column;
+flex-direction: column;
+row-gap: 1rem;
+justify-content: space-between;
   }
-  .rating-box {
-    width: 80%;
+  .tb-one{
+    flex: 1;
   }
-  .tb-one {
-    grid-area: tb-one;
+  .tb-two{
+    flex: 1;
   }
-  .tb-two {
-    grid-area: tb-two;
+  .tb-three{
+    flex: 1;
   }
-  .tb-three {
-    grid-area: tb-three;
+  .rating-box{
+    margin: 0;
+    padding: 10px 0;
   }
+
+.box-two > div:nth-child(1) {
+  margin: 0 auto 0 0;
+  width: 70%;
+}
+.box-two > div:nth-child(2) {
+  margin: 0 auto;
+  width: 75%;
+}
+.box-two > div:nth-child(3) {
+  margin: 0 0 0 auto;
+  width: 70%;
 }
 
+}
+/* ######################################### */
+/* ######################################### */
+@media (min-width: 1200px){
+.title{
+  /* padding-right: 40%; */
+}
+.rating-text{
+  padding-left: 1rem;
+}
+}
+/* ######################################### */
+/* ######################################### */
+@media (min-width: 1440px){
+  .container{
+    width: 1440px;
+  }
+.rating-box{
+  display: flex;
+  padding: 1rem;
+}
+.rating-text{
+  padding-left: 1rem;
+}
+}
 /* ######################### */
 footer {
   padding: 0.5rem;
