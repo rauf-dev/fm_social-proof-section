@@ -116,13 +116,13 @@ main {
   bottom: 0;
   right: 0;
 }
-/* ##################################### */
+/* ###################### */
 .box-one,
 .box-two,
 .tb-three {
   margin-bottom: 3rem;
 }
-/* ##################################### */
+/* ##################### */
 .title {
   font-weight: 700;
   color: var(--very-dark-magenta);
@@ -131,12 +131,12 @@ main {
   line-height: 1.1;
   margin-bottom: 2rem;
 }
-/* ##################################### */
+/* ################ */
 .text {
   color: var(--dark-grayish-magenta);
   /* margin-bottom: 3rem; */
 }
-/* ##################################### */
+/* #################*/
 .rating-box {
   background-color: var(--Light-grayish-magenta);
   margin: 1rem auto;
@@ -157,7 +157,7 @@ main {
   font-size: 14px;
   flex-shrink: 0;
 }
-/* ##################################### */
+/* ################## */
 
 .testemony-box {
   display: flex;
@@ -194,8 +194,8 @@ main {
   color: var(--White);
   line-height: 1.5;
 }
-/* ######################################### */
-/* ######################################### */
+
+
 /* ######################################### */
 @media (min-width: 1000px) {
   .container {
@@ -212,7 +212,7 @@ main {
   .box-two {
     margin-bottom: 0;
   }
-  /* ##################################### */
+  /* ################## */
   .bg-image-mobile {
     display: none;
   }
@@ -262,14 +262,6 @@ main {
   }
 }
 /* ######################################### */
-/* ######################################### */
-/* @media (min-width: 1200px) {
-  .rating-text {
-    padding-left: 1rem;
-  }
-} */
-/* ######################################### */
-/* ######################################### */
 @media (min-width: 1200px) {
   .container {
     max-width: 1440px;
@@ -285,7 +277,7 @@ main {
     padding: 0;
   }
 }
-/* ######################### */
+/* #################### */
 footer {
   padding: 0.5rem;
   margin-top: 0.5rem;
