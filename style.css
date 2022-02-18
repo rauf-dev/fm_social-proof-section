@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --Light-grayish-magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /* - Font size: 15px */
+  font-family: 'Spartan', sans-serif;
+  /* - Family: [Spartan](https://fonts.google.com/specimen/Spartan) */
+  /* - Weights: 400, 500, 700 */
+}
+
+/* START CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ####################################### */
+/* END CSS RESET */
+main {
+  /* height: 100%; */
+  font-size: 15px;
+  margin: 6rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+/* ##################################### */
+.bg-image-desktop {
+  display: none;
+}
+.bg-image-top {
+  position: absolute;
+  top: 0;
+}
+.bg-image-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* ##################################### */
+.box-one,
+.box-two,
+.tb-three {
+  margin-bottom: 3rem;
+}
+/* ##################################### */
+.title {
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+  /* color: var(--dark-grayish-magenta); */
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+/* ##################################### */
+.text {
+  color: var(--dark-grayish-magenta);
+  /* margin-bottom: 3rem; */
+}
+/* ##################################### */
+.rating-box {
+  background-color: var(--Light-grayish-magenta);
+  /* height: 60px; */
+  margin: 1rem auto;
+  padding: 1rem 0;
+  /* display: block; */
+}
+.rating-stars {
+  background-image: url(./images/icon-star.svg);
+  background-repeat: repeat-x;
+  height: 20px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  /* padding: 1rem 0; */
+  width: 85px;
+}
+.rating-text {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: 14px;
+  /* the weight/bold seems off */
+}
+/* ##################################### */
+
+.testemony-box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-magenta);
+  margin-bottom: 1rem;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.testemony-box__image-title-verified {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.testemony-box__image img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 1.5rem;
+}
+.testemony-box__title {
+  color: var(--White);
+  font-weight: 500;
+  font-size: 15px;
+}
+.testemony-box__verified {
+  color: var(--soft-pink);
+  /* font-weight: 400; */
+}
+.testemony-box__testemony {
+  color: var(--White);
+  line-height: 1.5;
+}
+
+/* ######################################### */
+@media (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'box-one box-one box-one box-two box-two box-two'
+      'tb-one tb-one tb-two tb-two tb-three tb-three';
+    margin: 10%;
+  }
+  /* ##################################### */
+  .bg-image-mobile{
+      display: none;
+  }
+  .bg-image-desktop{
+      display: block;
+  }
+  .box-one {
+    grid-area: box-one;
+    justify-items: start;
+    text-align: left;
+  }
+  .title {
+    margin-bottom: 0.2rem;
+    padding: 0 40% 0 0;
+  }
+  .text{
+      padding-right: 20%;
+  }
+  .box-two {
+    grid-area: box-two;
+    display: flex;
+    flex-direction: column;
+  }
+  .rating-box {
+    width: 80%;
+  }
+  .tb-one {
+    grid-area: tb-one;
+  }
+  .tb-two {
+    grid-area: tb-two;
+  }
+  .tb-three {
+    grid-area: tb-three;
+  }
+}
+
+/* ######################### */
+footer {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
