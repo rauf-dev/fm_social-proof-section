@@ -7,10 +7,9 @@
   --Light-grayish-magenta: hsl(300, 24%, 96%);
   --White: hsl(0, 0%, 100%);
 
-  /* - Font size: 15px */
+
   font-family: 'Spartan', sans-serif;
-  /* - Family: [Spartan](https://fonts.google.com/specimen/Spartan) */
-  /* - Weights: 400, 500, 700 */
+
 }
 
 /* START CSS RESET */
@@ -126,7 +125,6 @@ main {
 .title {
   font-weight: 700;
   color: var(--very-dark-magenta);
-  /* color: var(--dark-grayish-magenta); */
   font-size: 2rem;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -134,7 +132,6 @@ main {
 /* ################ */
 .text {
   color: var(--dark-grayish-magenta);
-  /* margin-bottom: 3rem; */
 }
 /* #################*/
 .rating-box {
@@ -206,10 +203,12 @@ main {
     row-gap: 2rem;
     padding: 10%;
     justify-content: space-between;
+    height: 100vh;
   }
   .box-one,
   .box-two {
     margin-bottom: 0;
+    height: 35%;
   }
   /* ################## */
   .bg-image-mobile {
@@ -224,23 +223,33 @@ main {
     text-align: left;
   }
   .title {
-    padding-right: 35%;
+    padding-right: 15%;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
   }
   .box-two {
     flex: 0 0 48%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+  .testemony-box{
+    height: 40%;
+    padding: 1.5rem 1rem;
+    margin-bottom: 0.1rem;
   }
   .tb-one {
-    flex: 1;
+    flex: 1 1 30%;
+    align-self: flex-start;
   }
   .tb-two {
-    flex: 1;
+    flex: 1 1 30%;
+    align-self: center;
   }
   .tb-three {
-    flex: 1;
+    flex: 1 1 30%;
+    align-self: flex-end;
   }
   .rating-box {
     margin: 0;
@@ -264,6 +273,13 @@ main {
 @media (min-width: 1200px) {
   .container {
     max-width: 1440px;
+  }
+  .box-one,
+  .box-two{
+    height: 38%;
+  }
+  .title{
+    font-size: 3rem;
   }
   .rating-box {
     display: flex;
